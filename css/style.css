@@ -26,6 +26,13 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
+@media only screen and (max-width: 24em) {
+  .container {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: #e0e8ff;
+  }
+}
 
 .pattern {
   grid-area: 2/2/-2/-2;
@@ -38,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card {
   grid-column: 2/5;
   border-radius: 2rem;
@@ -87,6 +95,11 @@ body {
 .card .plan__details {
   margin-right: auto;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 24em) {
+  .card .plan__details {
+    margin-right: 4rem;
+  }
 }
 .card .plan__title {
   color: #1f2f56;
@@ -140,6 +153,13 @@ body {
 
 .figure {
   width: 100%;
+}
+
+.attribution {
+  grid-area: 8/1/-1/-1;
+  justify-self: center;
+  align-self: center;
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

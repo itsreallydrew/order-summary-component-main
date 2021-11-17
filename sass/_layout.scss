@@ -9,10 +9,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	@media only screen and (max-width: $phone) {
-		// grid-area: 1 / 1 / -1 / -1;
-	}
 }
 
 .card {
@@ -70,6 +66,10 @@
 		&__details {
 			margin-right: auto;
 			font-size: 1.4rem;
+
+			@media only screen and (max-width: $phone) {
+				margin-right: 4rem;
+			}
 		}
 
 		&__title {
@@ -134,4 +134,11 @@
 
 .figure {
 	width: 100%;
+}
+
+.attribution {
+	grid-area: 8 / 1 / -1 / -1;
+	justify-self: center;
+	align-self: center;
+	margin-top: 5rem;
 }
