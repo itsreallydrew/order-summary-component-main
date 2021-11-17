@@ -1,12 +1,18 @@
 .pattern {
 	grid-area: 2 / 2 / -2 / -2;
 	padding: 10rem;
+	background-image: url(../images/pattern-background-desktop.svg);
+	background-repeat: no-repeat;
 	background-color: $primary-color;
 	width: 100%;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media only screen and (max-width: $phone) {
+		// grid-area: 1 / 1 / -1 / -1;
+	}
 }
 
 .card {
@@ -14,6 +20,7 @@
 	border-radius: 2rem;
 	background-color: white;
 	width: 35rem;
+	transition: all 0.2s;
 
 	display: grid;
 	grid-template-rows: repeat(5, min-content);
@@ -26,14 +33,102 @@
 
 	.heading-2 {
 		// margin-top: 3rem;
+		color: $dark-blue;
 		font-size: 2.5rem;
 		justify-self: center;
 	}
 
 	.desc {
-		font-size: 1.3rem;
-		color: $desat-blue;
-		justify-self: center;
+		font-size: 1.6rem;
+		color: rgba($color: $dark-blue, $alpha: 0.56);
+		text-align: center;
+		line-height: 2.5rem;
+		// justify-self: center;
+
+		@media only screen and (max-width: $phone) {
+			font-size: 1.4rem;
+		}
+	}
+
+	.icon {
+		height: 4rem;
+		width: 4rem;
+		fill: #717fa6;
+		background-color: $primary-color;
+		margin-right: 1.5rem;
+		border-radius: 50%;
+	}
+
+	.plan {
+		margin: 0 3rem;
+		background-color: rgba($color: $primary-color, $alpha: 0.4);
+		border-radius: 1rem;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+
+		&__details {
+			margin-right: auto;
+			font-size: 1.4rem;
+		}
+
+		&__title {
+			color: $dark-blue;
+			font-weight: 700;
+		}
+
+		&__fee {
+			color: rgba($color: $dark-blue, $alpha: 0.5);
+		}
+
+		&__change {
+			font-size: 1.2rem;
+			cursor: pointer;
+			color: rgba($color: $secondary-color, $alpha: 0.95);
+			font-weight: 700;
+
+			&:hover {
+				color: rgba($color: $secondary-color, $alpha: 0.7);
+			}
+		}
+	}
+
+	.order__options {
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		justify-items: center;
+		align-items: center;
+
+		&.-payment {
+			background-color: $secondary-color;
+			outline: none;
+			border: none;
+			border-radius: 0.8rem;
+			padding-top: 1.5rem;
+			width: 80%;
+			color: white;
+			cursor: pointer;
+			margin-bottom: 1rem;
+			box-shadow: 0 0.5rem 1.5rem rgba($color: $secondary-color, $alpha: 0.2);
+
+			&:hover {
+				background-color: rgba($color: $secondary-color, $alpha: 0.7);
+			}
+		}
+
+		&.-cancel {
+			outline: none;
+			border: none;
+			padding: 0.5rem;
+			background: none;
+			font-weight: 700;
+			cursor: pointer;
+			color: rgba($color: $dark-blue, $alpha: 0.4);
+
+			&:hover {
+				color: $dark-blue;
+			}
+		}
 	}
 }
 

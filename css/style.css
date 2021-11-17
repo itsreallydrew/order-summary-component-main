@@ -1,4 +1,6 @@
 /********************/
+/********************/
+/********************/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 *,
 *::before,
@@ -28,18 +30,20 @@ body {
 .pattern {
   grid-area: 2/2/-2/-2;
   padding: 10rem;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
   background-color: #e0e8ff;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .card {
   grid-column: 2/5;
   border-radius: 2rem;
   background-color: white;
   width: 35rem;
+  transition: all 0.2s;
   display: grid;
   grid-template-rows: repeat(5, min-content);
   gap: 3rem;
@@ -49,13 +53,89 @@ body {
   width: 100%;
 }
 .card .heading-2 {
+  color: #1f2f56;
   font-size: 2.5rem;
   justify-self: center;
 }
 .card .desc {
-  font-size: 1.3rem;
-  color: #7280a7;
-  justify-self: center;
+  font-size: 1.6rem;
+  color: rgba(31, 47, 86, 0.56);
+  text-align: center;
+  line-height: 2.5rem;
+}
+@media only screen and (max-width: 24em) {
+  .card .desc {
+    font-size: 1.4rem;
+  }
+}
+.card .icon {
+  height: 4rem;
+  width: 4rem;
+  fill: #717fa6;
+  background-color: #e0e8ff;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+}
+.card .plan {
+  margin: 0 3rem;
+  background-color: rgba(224, 232, 255, 0.4);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card .plan__details {
+  margin-right: auto;
+  font-size: 1.4rem;
+}
+.card .plan__title {
+  color: #1f2f56;
+  font-weight: 700;
+}
+.card .plan__fee {
+  color: rgba(31, 47, 86, 0.5);
+}
+.card .plan__change {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgba(56, 41, 224, 0.95);
+  font-weight: 700;
+}
+.card .plan__change:hover {
+  color: rgba(56, 41, 224, 0.7);
+}
+.card .order__options {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.card .order__options.-payment {
+  background-color: #3829e0;
+  outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  padding-top: 1.5rem;
+  width: 80%;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(56, 41, 224, 0.2);
+}
+.card .order__options.-payment:hover {
+  background-color: rgba(56, 41, 224, 0.7);
+}
+.card .order__options.-cancel {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(31, 47, 86, 0.4);
+}
+.card .order__options.-cancel:hover {
+  color: #1f2f56;
 }
 
 .figure {

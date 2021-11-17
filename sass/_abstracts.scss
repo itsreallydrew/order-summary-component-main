@@ -1,4 +1,5 @@
 /********************/
+/********************/
 // COLORS
 
 // Primary
@@ -9,3 +10,9 @@ $secondary-color: hsl(245, 75%, 52%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $desat-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
+
+/********************/
+// MEDIA QUERY
+
+// Breakpoint
+$phone: 24em; // 375px / 16rem
