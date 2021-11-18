@@ -16,8 +16,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 This was my first coding challenge in following a mockup from scratch. I decided to use CSS grid as my main tool for creating this design.
@@ -34,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub/responsive-order-summary-card-using-css-grid-zG7qSoOhW)
-- Live Site URL: [Add live site URL here](https://thirsty-shannon-ee26e7.netlify.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub/responsive-order-summary-card-using-css-grid-zG7qSoOhW)
+- Live Site URL: [Live Site](https://thirsty-shannon-ee26e7.netlify.app/)
 
 ## My process
 
@@ -53,7 +51,7 @@ I am most proud of the fact that I built the entire card using grid. Normally th
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+It seems simple but this is how I defined the size of the card:
 
 ```css
 display: grid;
